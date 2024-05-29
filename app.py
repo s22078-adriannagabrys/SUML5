@@ -78,8 +78,3 @@ def main():
         with prediction:
             st.header(f"Czy dana osoba przeżyje? {'Tak' if survival[0] == 1 else 'Nie'}")
             st.subheader(f"Pewność predykcji {s_confidence[0][survival[0]] * 100:.2f} %")
-
-if __name__ == "__main__":
-    main()
-
-## Źródło danych [https://www.kaggle.com/c/titanic/](https://www.kaggle.com/c/titanic), zastosowanie przez Adama Ramblinga
