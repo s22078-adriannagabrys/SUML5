@@ -22,7 +22,7 @@ wiki_wiki = wikipediaapi.Wikipedia('en', headers={'User-Agent': 'Tytanic/1.0 (s2
 def fetch_wikipedia_page(title):
     page = wiki_wiki.page(title)
     if page.exists():
-        return page.summary
+        return page.text
     else:
         return "The page does not exist."
 
