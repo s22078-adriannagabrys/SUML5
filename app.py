@@ -40,7 +40,7 @@ def main():
     if st.button("Predict"):
         # Prepare input data for prediction
         data = np.array(
-            [[pclass_radio, sex_radio, age_slider, sibsp_slider, parch_slider, fare_slider, embarked_radio]])
+            [[pclass_radio, age_slider, sibsp_slider, parch_slider, fare_slider, embarked_radio, sex_radio]])
 
         # Predict survival
         survival = model.predict(data)
