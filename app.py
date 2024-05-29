@@ -24,7 +24,7 @@ def main():
     with overview:
         st.title("Czy przeżyłbyś katastrofę?")
         st.image(
-            "https://www.google.com/search?sca_esv=e87395d15064fe37&q=obesity&uds=ADvngMhpsojwKe5eIOqT5IDaiLbexbpZAAznK3Ol-4dTE8lWv2IWW5kf9ztqdsIKASuznHjntfzlXQ72wYgq6EgPDqKbQkTGVRD3GvDCn8RzmMBS3ExbH_iCc1PikDU-zM4ey0_V-YS6pdABTFHlS5ssOC7sdse-IGS_WDr12LrqrZ9DUPc2Bg_T7DggIHDYMSkVwj4FHjEvaeZYNUoZ05_mFOlz8H_xxew7k9cZrGvbxCSwZZlXhATusyReXWQk6iz5_NNcM-JeeYGjXdW2stIVCNQSTFNoyEsnJ-bxJhCDcDL5BMBjLfc&udm=2&prmd=ivnbz&sa=X&ved=2ahUKEwiq5YzeirOGAxWBJhAIHWpVCBIQtKgLegQIDhAB&biw=1872&bih=958&dpr=1#vhid=chjz49Y1fVQrmM&vssid=mosaic")
+            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fprogenmethod.com%2Fis-obesity-a-disease%2F&psig=AOvVaw1zXljSvEggO_hS-tPhqSCV&ust=1717079771224000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOixgeWKs4YDFQAAAAAdAAAAABAJ")
 
     with left:
         sex_radio = st.radio("Płeć", list(sex_d.keys()), format_func=lambda x: sex_d[x])
