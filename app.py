@@ -1,11 +1,23 @@
 import streamlit as st
+import wikipediaapi
 import pickle
 import numpy as np
 from datetime import datetime
-import wikipediaapi
 
-# Initialize the Wikipedia API
-wiki_wiki = wikipediaapi.Wikipedia('en')
+startTime = datetime.now()
+
+# Load the pre-trained model
+filename = "model.h5"
+with open(filename, 'rb') as file:
+    model = pickle.load(file)
+
+# Dictionaries for translating codes to labels
+sex_d = {0: "Kobieta", 1: "Mężczyzna"}
+pclass_d = {0: "Pierwsza", 1: "Druga", 2: "Trzecia"}
+embarked_d = {0: "Cherbourg", 1: "Queenstown", 2: "Southampton"}
+
+# Initialize the Wikipedia API with a user agent
+wiki_wiki = wikipediaapi.Wikipedia('en', headers={'User-Agent': 'Tytanic/1.0 (s22078@pjwstk.edu.pl)'})
 
 def fetch_wikipedia_page(title):
     page = wiki_wiki.page(title)
