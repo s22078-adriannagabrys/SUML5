@@ -24,7 +24,7 @@ def main():
     with overview:
         st.title("Czy przeżyłbyś katastrofę?")
         st.image(
-            "https://www.google.com/url?sa=i&url=https%3A%2F%2Fprogenmethod.com%2Fis-obesity-a-disease%2F&psig=AOvVaw1zXljSvEggO_hS-tPhqSCV&ust=1717079771224000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOixgeWKs4YDFQAAAAAdAAAAABAJ")
+            "https://media1.popsugar-assets.com/files/thumbor/7CwCuGAKxTrQ4wPyOBpKjSsd1JI/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/04/19/743/n/41542884/5429b59c8e78fbc4_MCDTITA_FE014_H_1_.JPG")
 
     with left:
         sex_radio = st.radio("Płeć", list(sex_d.keys()), format_func=lambda x: sex_d[x])
