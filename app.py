@@ -57,14 +57,14 @@ def main():
         embarked_radio = st.radio("Port zaokrętowania", {0: "Cherbourg", 1: "Queenstown", 2: "Southampton"})
 
     with right:
-        age_input = st.text_input("Wiek", value="50")
-        sibsp_input = st.text_input("# Liczba rodzeństwa i/lub partnera", value="0")
-        parch_input = st.text_input("# Liczba rodziców i/lub dzieci", value="0")
-        fare_input = st.text_input("Cena biletu", value="0")
+        age_slider = st.slider("Wiek", value=50, min_value=1, max_value=100)
+        sibsp_slider = st.slider("# Liczba rodzeństwa i/lub partnera", min_value=0, max_value=8)
+        parch_slider = st.slider("# Liczba rodziców i/lub dzieci", min_value=0, max_value=6)
+        fare_slider = st.slider("Cena biletu", min_value=0, max_value=500, step=10)
 
     if st.button("Predict"):
         # Prepare input data for prediction
-        data = np.array([[int(pclass_radio), int(sex_radio), int(age_input), int(sibsp_input), int(parch_input), float(fare_input), int(embarked_radio)]])
+        data = np.array([[pclass_radio, sex_radio, age_slider, sibsp_slider, parch_slider, fare_slider, embarked_radio]])
 
         # Load the pre-trained model
         filename = "model.h5"
