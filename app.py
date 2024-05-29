@@ -23,6 +23,8 @@ def main():
 
     with overview:
         st.title("Czy przeżyłbyś katastrofę?")
+        st.image(
+            "https://media1.popsugar-assets.com/files/thumbor/7CwCuGAKxTrQ4wPyOBpKjSsd1JI/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/04/19/743/n/41542884/5429b59c8e78fbc4_MCDTITA_FE014_H_1_.JPG")
 
     with left:
         sex_radio = st.radio("Płeć", list(sex_d.keys()), format_func=lambda x: sex_d[x])
@@ -37,7 +39,7 @@ def main():
 
     if st.button("Predict"):
         # Prepare input data for prediction
-        data = np.array([[pclass_radio, sex_radio, age_slider, sibsp_slider, parch_slider, fare_slider, embarked_radio]])
+        data = np.array([[pclass_radio, age_slider, sibsp_slider, parch_slider, fare_slider, embarked_radio, sex_radio,]])
 
         # Predict survival
         survival = model.predict(data)
@@ -47,8 +49,7 @@ def main():
             st.header(f"Czy dana osoba przeżyje? {'Tak' if survival[0] == 1 else 'Nie'}")
             st.subheader(f"Pewność predykcji {s_confidence[0][survival[0]] * 100:.2f} %")
 
-    # Move the image to the bottom
-    st.image("https://media1.popsugar-assets.com/files/thumbor/7CwCuGAKxTrQ4wPyOBpKjSsd1JI/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/04/19/743/n/41542884/5429b59c8e78fbc4_MCDTITA_FE014_H_1_.JPG")
+
 
 if __name__ == "__main__":
     main()
