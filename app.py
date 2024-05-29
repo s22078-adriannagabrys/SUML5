@@ -24,7 +24,7 @@ def main():
     with overview:
         st.title("Czy przeżyłbyś katastrofę?")
         st.image(
-            "https://media1.popsugar-assets.com/files/thumbor/7CwCuGAKxTrQ4wPyOBpKjSsd1JI/fit-in/2048xorig/filters:format_auto-!!-:strip_icc-!!-/2017/04/19/743/n/41542884/5429b59c8e78fbc4_MCDTITA_FE014_H_1_.JPG")
+            "https://www.google.com/search?sca_esv=e87395d15064fe37&q=obesity&uds=ADvngMhpsojwKe5eIOqT5IDaiLbexbpZAAznK3Ol-4dTE8lWv2IWW5kf9ztqdsIKASuznHjntfzlXQ72wYgq6EgPDqKbQkTGVRD3GvDCn8RzmMBS3ExbH_iCc1PikDU-zM4ey0_V-YS6pdABTFHlS5ssOC7sdse-IGS_WDr12LrqrZ9DUPc2Bg_T7DggIHDYMSkVwj4FHjEvaeZYNUoZ05_mFOlz8H_xxew7k9cZrGvbxCSwZZlXhATusyReXWQk6iz5_NNcM-JeeYGjXdW2stIVCNQSTFNoyEsnJ-bxJhCDcDL5BMBjLfc&udm=2&prmd=ivnbz&sa=X&ved=2ahUKEwiq5YzeirOGAxWBJhAIHWpVCBIQtKgLegQIDhAB&biw=1872&bih=958&dpr=1#vhid=chjz49Y1fVQrmM&vssid=mosaic")
 
     with left:
         sex_radio = st.radio("Płeć", list(sex_d.keys()), format_func=lambda x: sex_d[x])
